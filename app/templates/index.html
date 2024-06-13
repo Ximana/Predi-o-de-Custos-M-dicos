@@ -10,35 +10,29 @@
     <div class="container">
     <h1>Simulação de Custos Médicos</h1>
     <form id="formulario" action="/predict" method="post">
-        <label for="ID_Pedido">ID Pedido:</label><br>
-        <input type="text" id="ID_Pedido" name="ID_Pedido" ><br><br>
+        <label for="idade">Idade</label><br>
+        <input type="number" id="idade" name="idade" ><br><br>
 
-        <label for="Data_Pedido">Data Pedido:</label><br>
-        <input type="date" id="Data_Pedido" name="Data_Pedido" ><br><br>
+        <label for="sexo">Sexo</label><br>
+        <select id="sexo" name="sexo">
+            <option value="male">Masculino</option>
+            <option value="female">Femenino</option>
+        </select>
 
-        <label for="ID_Cliente">ID Cliente:</label><br>
-        <input type="text" id="ID_Cliente" name="ID_Cliente" ><br><br>
+        <label for="bmi"> Índice de Massa Corporal</label><br>
+        <input type="text" id="bmi" name="bmi" ><br><br>
 
-        <label for="Segmento">Segmento:</label><br>
-        <input type="text" id="Segmento" name="Segmento" ><br><br>
+        <label for="crianca">Número de filhos cobertos pelo seguro de saúde</label><br>
+        <input type="number" id="crianca" name="crianca" ><br><br>
 
-        <label for="Pais">País:</label><br>
-        <input type="text" id="Pais" name="Pais" ><br><br>
+        <label for="fumante">Fumante</label><br>
+         <select id="fumante" name="fumante">
+            <option value="yes">Sim</option>
+            <option value="no">Nao</option>
+        </select>
 
-        <label for="Cidade">Cidade:</label><br>
-        <input type="text" id="Cidade" name="Cidade" ><br><br>
-
-        <label for="Estado">Estado:</label><br>
-        <input type="text" id="Estado" name="Estado" ><br><br>
-
-        <label for="ID_Produto">ID Produto:</label><br>
-        <input type="text" id="ID_Produto" name="ID_Produto" ><br><br>
-
-        <label for="Categoria">Categoria:</label><br>
-        <input type="text" id="Categoria" name="Categoria" ><br><br>
-
-        <label for="SubCategoria">SubCategoria:</label><br>
-        <input type="text" id="SubCategoria" name="SubCategoria" ><br><br>
+        <label for="regiao">Regiao</label><br>
+        <input type="text" id="regiao" name="regiao" ><br><br>
 
         <input type="submit" value="Simular Custos">
     </form>
@@ -49,54 +43,3 @@
 </div>
 </body>
 </html>
-
-
-<!--
-<!DOCTYPE html>
-<html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário de Pedidos</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
-    <div class="container">
-        <h1>Formulário de Pedidos</h1>
-        <form id="formulario">
-            <label for="id_pedido">ID Pedido:</label><br>
-            <input type="text" id="id_pedido" name="id_pedido" required><br><br>
-
-            <label for="data_pedido">Data do Pedido:</label><br>
-            <input type="date" id="data_pedido" name="data_pedido" required><br><br>
-
-            <label for="id_cliente">ID Cliente:</label><br>
-            <input type="text" id="id_cliente" name="id_cliente" required><br><br>
-
-            <label for="segmento">Segmento:</label><br>
-            <input type="text" id="segmento" name="segmento" required><br><br>
-
-            <label for="pais">País:</label><br>
-            <input type="text" id="pais" name="pais" required><br><br>
-
-            <label for="cidade">Cidade:</label><br>
-            <input type="text" id="cidade" name="cidade" required><br><br>
-
-            <label for="estado">Estado:</label><br>
-            <input type="text" id="estado" name="estado" required><br><br>
-
-            <label for="id_produto">ID Produto:</label><br>
-            <input type="text" id="id_produto" name="id_produto" required><br><br>
-
-            <label for="categoria">Categoria:</label><br>
-            <input type="text" id="categoria" name="categoria" required><br><br>
-
-            <label for="subcategoria">SubCategoria:</label><br>
-            <input type="text" id="subcategoria" name="subcategoria" required><br><br>
-
-            <button type="submit">Enviar</button>
-        </form>
-    </div>
-</body>
-</html>
--->

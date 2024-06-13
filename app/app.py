@@ -22,16 +22,12 @@ def predict():
     # Pegar os dados do formulário
     data = request.form
     novos_dados = pd.DataFrame({
-        'ID_Pedido': [data['ID_Pedido']],
-        'Data_Pedido': [data['Data_Pedido']],
-        'ID_Cliente': [data['ID_Cliente']],
-        'Segmento': [data['Segmento']],
-        'Pais': [data['Pais']],
-        'Cidade': [data['Cidade']],
-        'Estado': [data['Estado']],
-        'ID_Produto': [data['ID_Produto']],
-        'Categoria': [data['Categoria']],
-        'SubCategoria': [data['SubCategoria']]
+        'age': [data['idade']],
+        'sex': [data['sexo']],
+        'bmi': [data['bmi']],
+        'children': [data['crianca']],
+        'smoker': [data['fumante']],
+        'region': [data['regiao']],
     })
 
     # Transformar variáveis categóricas em numéricas
@@ -44,7 +40,7 @@ def predict():
     y_pred_novos_dados = model.predict(novos_dados)
 
     # Exibir a previsão
-    prediction_text = f'Previsão de Valor de Venda: kz{y_pred_novos_dados[0]:.2f}'
+    prediction_text = f'Previsão dos Custos médicos individuais faturados pelo seguro de saúde: kz{y_pred_novos_dados[0]:.2f}'
     return render_template('index.html', prediction_text=prediction_text)
 
 if __name__ == "__main__":
